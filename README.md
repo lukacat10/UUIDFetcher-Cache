@@ -11,3 +11,5 @@ UUIDFetcher: https://gist.github.com/evilmidget38/26d70114b834f71fb3b4
 Cache Libary (includes the uuidfetcher library): https://github.com/Armarr/Autorank-2/tree/master/src/me/armar/plugins/autorank/util/uuid
 
 By the way, I am using diffrent package names than the authors to organize everything, I'm not trying to claim those pieces of code as mine!
+
+Mookdash le Nikita! Happy Birthday!
