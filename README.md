@@ -13,6 +13,7 @@ Cache Libary (includes the uuidfetcher library): https://github.com/Armarr/Autor
 By the way, I am using diffrent package names than the authors to organize everything, I'm not trying to claim those pieces of code as mine!
 
 Todo:
-Correctly handle UUIDs and Player names that don't exsit in the mojang api.
+
+ - Correctly handle UUIDs and Player names that don't exsit in the mojang api.
 
 Mookdash le Nikita! Happy Birthday!
