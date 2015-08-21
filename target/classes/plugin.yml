@@ -1,5 +1,0 @@
-name: UUIDManager Example Plugin
-version: 0.0.0
-main: me.lukacat10.exampleUUIDFetcherPlugin.MainJavaPlugin
-description: A plugin example for the UUIDManager libary
-author: lukacat10
