@@ -16,7 +16,7 @@ public class MainJavaPlugin extends JavaPlugin{
 		//Bukkit.getConsoleSender().sendMessage("The plugin " + getDescription().getFullName() + " has been enabled!");
 		//^^^^The above method will print the (almost) same result as the getLogger(). Thanks to PvPNiK for mentioning this :P
 		getLogger().info("The uuidstorage is now being initialized!");
-		setUUIDStorage(new UUIDStorage(this)); 
+		setUUIDStorage(new UUIDStorage(this, 24)); //Second parameter made by me :D (lukacat10). Controls the amount of hours until the uuid storage unit expires. 
 		getLogger().info("Loading uuid storage units from last server shutdown\reload.");
 		getUUIDStorage().createNewFiles();
 		getLogger().info("The uuid storage unit has been successfully initialized and loaded from the configs.");

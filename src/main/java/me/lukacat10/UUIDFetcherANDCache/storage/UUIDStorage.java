@@ -33,13 +33,14 @@ public class UUIDStorage {
 	private final String desFolder;
 
 	// Expiration date in hours
-	private final int expirationDate = 12;
+	private final int expirationDate;
 
 	private final List<String> fileSuffixes = Arrays.asList("a", "b", "c", "d",
 			"e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q",
 			"r", "s", "t", "u", "v", "w", "x", "y", "z", "other");
 
 	public UUIDStorage(final MainJavaPlugin instance) {
+		this.expirationDate = 12;//Automatically setting the expiration date to 12 hours. This line was added by lukacat10
 		this.plugin = instance;
 
 		desFolder = plugin.getDataFolder() + "/uuids";
@@ -53,7 +54,22 @@ public class UUIDStorage {
 					}
 				}, 1200, 2400);
 	}
+	
+	public UUIDStorage(final MainJavaPlugin instance, int timeToExpire){//I (lukacat10) added this constructor to allow editing the storage expire time.
+		this.expirationDate = timeToExpire;//Setting the expiration date to the given value provided in the second parameter of this constructor. Added by lukacat10.
+		this.plugin = instance;
 
+		desFolder = plugin.getDataFolder() + "/uuids";
+
+		//Run save task every 2 minutes
+		plugin.getServer().getScheduler()
+				.runTaskTimerAsynchronously(plugin, new Runnable() {
+					@Override
+					public void run() {
+						saveAllFiles();
+					}
+				}, 1200, 2400);
+	}
 	public void createNewFiles() {
 
 		for (final String suffix : fileSuffixes) {
