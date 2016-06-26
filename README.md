@@ -16,4 +16,3 @@ Todo:
 
  - Correctly handle UUIDs and Player names that don't exsit in the mojang api.
 
-Mookdash le Nikita! Happy Birthday!
